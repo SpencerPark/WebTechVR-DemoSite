@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Alan Wassyng's Home Page
+    </title>
+</head>
+<body>
+<!- SUMMARY INFO -->
+<table>
+    <tr>
+        <td>
+            <img id="wassyng-img" class="vr-box" data-vr-position="1.8 1.5 4" data-vr-rotation="0 90 0" data-vr-scale=".5 1 .5"
+                 src="public/alan-wassyng.jpg" height="275" width="143">
+        </td>
+        <td>
+
+        </td>
+        <td class="vr-box" data-vr-position="0 1.5 2.5" data-vr-scale="1 1 .3" data-vr-snapshot-height="256">
+            <h2>Alan Wassyng</h2>
+            <p>Associate Professor, <a href="http://www.cas.mcmaster.ca/">Department of Computing and Software</a>
+                <br><a href="http://www.mcmaster.ca/">McMaster University</a>, <a href="http://www.eng.mcmaster.ca/">Faculty
+                    of Engineering</a>
+                <br>Office: Room 166, Information Technology Building <a href="http://registrar.mcmaster.ca/virtual/">(maps)</a>
+                <br>Phone: +1 (905) 525-9140 ext. 26072
+                <br>E-mail: <a href="mailto:wassyng@mcmaster.ca">wassyng@mcmaster.ca</a>
+                <br>Past Director, McMaster Centre for Software
+                Certification 10/2009-1/2017 <a
+                        href="http://www.mcscert.ca/">(McSCert)</a></p>
+            Updated March 2017.
+        </td>
+    </tr>
+</table>
+
+<!- EDUCATION -->
+<div class="vr-box" data-vr-position="1.1 1.5 3" data-vr-scale="1 1 .3" data-vr-height="0.5" data-vr-rotation="0 -45 0"
+     data-vr-snapshot-height="256">
+
+    <h3>EDUCATION</h3>
+    <ul>
+        <li>Ph.D., 1979, "The Solution of Large Systems of Linear Algebraic Equations with Applications in Boundary
+            Element Methods"
+        </li>
+        <li>M.Sc., 1974, "The Motion of Record Styli & Distortion in Hi-Fi Turntable Systems"</li>
+        <li>B.Sc. (Hons), 1971, Applied Mathematics</li>
+        <li>B.Sc., 1970, Applied Mathematics, Mathematics</li>
+    </ul>
+    <p>These degrees were obtained at the <a href="http://www.wits.ac.za/">University of the Witwatersrand</a>,
+        Johannesburg, South Africa.</p>
+
+</div>
+<!- RESEARCH -->
+<div class="vr-box" data-vr-position="-1.1 1.5 3" data-vr-rotation="0 45 0" data-vr-scale="1 1 .3" data-vr-height="0.5"
+     data-vr-snapshot-height="256">
+    <h3>RESEARCH</h3>
+    <ul>
+        <li> Software certification - see McSCert above. Also, I am a founding member of the <a
+                href="http://cps-vo.org/group/scc/">Software Certification Consortium (SCC)</a></li>
+        <li> Assurance Cases</li>
+        <li> Real-time and embedded systems - especially
+            safety-critical systems
+        </li>
+        <li> Timing issues in requirements and software design</li>
+        <li> Tabular expressions - and their use in industry</li>
+        <li> Methods for rigorous software development</li>
+        <li> Software tools for rigorous software development</li>
+        <li> Software engineering education</li>
+    </ul>
+</div>
+
+<!- TEACHING -->
+<div class="vr-box" data-vr-position="-1.5 1.5 4.2" data-vr-rotation="0 90 0" data-vr-scale="1 1 .3" data-vr-height="2"
+     data-vr-snapshot-height="512">
+    <h3>TEACHING</h3>
+    <h4>Graduate Courses</h4>
+    <ul>
+        <li> CAS 703, Software Design (2004)</li>
+        <li> CAS 753, Specifying, Implementing and Verifying
+            Timing Behaviours for Hard Real-Time Systems (2007, 2008, 2011)
+        </li>
+        <li> CAS 781, Development &amp; Certification of Software Intensive Safety-Critical Systems (2014)</li>
+    </ul>
+
+    <p><h4>Undergraduate Courses</h4></p>
+    <ul>
+        <li> ENG 1D04, Engineering Computation (2006-2008)</li>
+        <li> SFWR ENG 2AA4, Software Design I (2004-2006, 2010, 2013-2015)</li>
+        <li> SFWR ENG 3E03, Design &amp; Selection of Sequential
+            Programming Languages (2000-2001)
+        </li>
+        <li> SFWR ENG 3F03, Machine Level Programming (2003-2006)</li>
+        <li> SFWR ENG 3K04, Software Development for Electrical &amp; Mechatronics Engineers (2008, 2010-2011, 2016)
+        </li>
+        <li> SFWR ENG 3X03, Scientific Computation and
+            Mathematical Simulation (2005)
+        </li>
+        <li> SFWR ENG 4G06/TRON 4TB6, Senior Design Project
+            (Capstone) for Mechatronics &amp; Software Engineers (2010-2015, 2016)
+        </li>
+    </ul>
+
+</div>
+<table>
+    <tr>
+        <td>
+            <!- INVITED TALKS -->
+            <a href="invited.html">
+                <h3>SELECTED INVITED TALKS</h3>
+            </a>
+
+        </td>
+        <td>&nbsp;
+
+        </td>
+        <td>
+            <!- PUBLICATIONS -->
+            <a href="publications.html">
+                <h3>SELECTED PUBLICATIONS</h3>
+            </a>
+
+        </td>
+    </tr>
+</table>
+<script>
+    var WEB_TECH_VR = {
+        VRSpoof: false,
+        sky: {
+            color: '#259cff'
+        },
+        floor: {
+            color: '#857754'
+        },
+        cursor: {
+            color: 'red'
+        }
+    }
+</script>
+<script src="public/WebTechVR.js"></script>
+<script>
+    if (IS_VR_ENV) {
+        var img = document.getElementById('wassyng-img');
+        var rotation = 0;
+        setInterval(function () {
+            rotation += 1;
+            img.setAttribute('data-vr-rotation', '0 ' + rotation + ' 0');
+        }, 50);
+    }
+</script>
+</body>

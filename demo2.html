@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta name="theme-color" content="#1181DE">
+    <style>
+        li {
+            cursor: hand;
+        }
+        body {
+            background-color: #768898;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Demo 2</h1>
+    <ul>
+        <li class="vr-torus" data-vr-rotation="-90 -120 0" data-vr-radius="2" data-vr-radius-tubular="0.2"
+            data-vr-snapshot-height="64" data-vr-position="0 1 0" onclick="randomizeBackgroundColor(this)">
+            Element 1
+        </li>
+        <li class="vr-torus" data-vr-rotation="-90 -120 0" data-vr-radius="2" data-vr-radius-tubular="0.2"
+            data-vr-snapshot-height="64" data-vr-position="0 2 0" onclick="randomizeBackgroundColor(this)">
+            Element 2
+        </li>
+        <li class="vr-torus" data-vr-rotation="-90 -120 0" data-vr-radius="2" data-vr-radius-tubular="0.2"
+            data-vr-snapshot-height="64" data-vr-position="0 3 0" onclick="randomizeBackgroundColor(this)">
+            Element 3
+        </li>
+    </ul>
+</div>
+<script>
+    function randomizeBackgroundColor(li) {
+        li.style.backgroundColor = '#' + Math.round(Math.random() * 0xFFFFFF).toString(16);
+    }
+
+    var WEB_TECH_VR = {
+        VRSpoof: false,
+        floor: {
+            color: '#1e4f7d'
+        },
+        sky: {
+            color: '#768898'
+        },
+        cursor: {
+            color: 'red'
+        }
+    }
+</script>
+<script src="public/WebTechVR.js"></script>
+</body>
+</html>

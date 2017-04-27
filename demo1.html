@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta name="theme-color" content="#1181DE">
+    <link rel="stylesheet" type="text/css" href="public/WebTechVR.css"/>
+    <style>
+        img:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Demo 1</h1>
+    <h1 class="vr-only vr-box" data-vr-position="0 2 0">VR Demo 1</h1>
+
+    <img src="public/McMasterMarauders.jpg" class="vr-box"
+         onmouseenter="this.setAttribute('data-vr-scale', '1.1 1.1 1.1')"
+         onmouseleave="this.setAttribute('data-vr-scale', '1 1 1')"/>
+</div>
+<script>
+    var WEB_TECH_VR = {
+        VRSpoof: false,
+        floor: {
+            color: '#000000'
+        }
+    }
+</script>
+<script src="public/WebTechVR.js"></script>
+</body>
+</html>

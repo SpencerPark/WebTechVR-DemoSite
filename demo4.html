@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta name="theme-color" content="#1181DE">
+    <style>
+        table {
+            table-layout: fixed;
+            width: 10em;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .thumbs-button {
+            border-radius: 1em;
+            width: 5em;
+            cursor: hand;
+        }
+        #thumbsup {
+            background-color: lawngreen;
+        }
+        #thumbsdown {
+            background-color: red;
+        }
+        #progress {
+            background-color: lawngreen;
+            width: 20em;
+            overflow: hidden;
+            position: relative;
+        }
+        #progress-overlay {
+            background-color: red;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Demo 4</h1>
+    <table>
+        <tr>
+            <td id="thumbsdown" class="thumbs-button vr-circle" onclick="thumbsDown()"
+                data-vr-position="-1.5 0 0" data-vr-radius="0.25">
+                <h1>-1</h1>
+            </td>
+            <td id="progress" class="vr-box" data-vr-height="0.5" data-vr-width="2">
+                <div id="progress-overlay"></div>
+            </td>
+            <td id="thumbsup" class="thumbs-button vr-circle" onclick="thumbsUp()"
+                data-vr-position="1.5 0 0" data-vr-radius="0.25">
+                <h1>+1</h1>
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    var votesUp = 0;
+    var votesDown = 0;
+
+    function renderVotes() {
+        var total = votesUp + votesDown;
+        var overlayPercentage = '50%';
+        if (total !== 0)
+            overlayPercentage = (100*(votesDown / total)) + '%';
+        document.getElementById('progress-overlay').style.width = overlayPercentage;
+    }
+
+    function thumbsUp() {
+        votesUp++;
+        renderVotes();
+    }
+
+    function thumbsDown() {
+        votesDown++;
+        renderVotes();
+    }
+
+    var WEB_TECH_VR = {
+        VRSpoof: false,
+        floor: {
+            color: '#000000'
+        }
+    }
+</script>
+<script src="public/WebTechVR.js"></script>
+</body>
+</html>
